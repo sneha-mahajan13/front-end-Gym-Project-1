@@ -1,49 +1,187 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visibility and z-Index</title>
-    <style>
-        .box {
-            width: 170px;
-            height: 170px;
-            border: 2px solid black;
-        }
-
-        #box1 {
-            position:relative;
-            background-color: aqua;
-            top: 50px;
-        }
-
-        #box2 {
-            top: 35px;
-            position: relative;
-            background-color: blueviolet;
-            /* will hide the element but will show its empty space   */
-            /* visibility: hidden; */
-            /* will hide the element and the space  */
-            /* display: none; */
-          
-        }
-
-        #box3 {
-            background-color: greenyellow;
-        }
-
-        #box4 {
-            background-color: palevioletred;
-        }
-    </style>
+    <title>Fitness Camp</title>
 </head>
 
+<link rel="stylesheet" href="style.css">
+<style>
+    /* CSS Reset */
+    body {
+        margin: 0px;
+        padding: 0px;
+        background: url('img3.jpg');
+        color: white;
+        font-family: cursive;
+
+    }
+
+    .left {
+        /* border: 2px solid red; */
+        display: inline-block;
+        position: absolute;
+        left: 60px;
+        top: 20px;
+
+    }
+
+    .left img {
+        width: 100px;
+
+    }
+
+    .left div {
+        text-align: center;
+        line-height: 20px;
+        font-size: 17px;
+    }
+
+    .middle {
+        /* border: 2px solid blue; */
+        display: block;
+        width: 45%;
+        margin: 20px auto;
+
+
+    }
+
+    .right {
+        /* border: 2px solid rgb(197, 211, 10); */
+        display: inline-block;
+        position: absolute;
+        right: 34px;
+        top: 34px;
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 15px;
+
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 4px 4px;
+        text-align: center;
+        font-size: 23px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: burlywood;
+
+    }
+
+    .btn {
+        margin: 0px 9px;
+        color: white;
+        background-color: black;
+        padding: 3px 5px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: cursive;
+    }
+
+    .btn:hover {
+        color: cadetblue;
+    }
+
+    .continer {
+        border: 2px solid green;
+        margin: 100px 38px;
+        padding: 15px;
+        width: 40%;
+        border-radius: 7px;
+        font-size: 10px;
+        float: right
+    }
+
+    .form-group input {
+        text-align: center;
+        display: block;
+        width: 350px;
+        padding: 3px;
+        border: 3px solid black;
+        margin: 11px auto;
+        font-size: 18px;
+        border-radius: 5px;
+        font-family: cursive;
+    }
+
+    .continer h1 {
+        text-align: center;
+    }
+
+    .continer button {
+        display: block;
+        width: 71%;
+        margin: 25px auto;
+    }
+</style>
+
 <body>
-    <div class="box" id="box1"></div>
-    <div class="box" id="box2"></div>
-    <div class="box" id="box3"></div>
-    <div class="box" id="box4"></div>
+    <header class="header">
+        <div class="left">
+            <!-- left bos for logo -->
+            <img src="img1.jpg" alt="">
+            <div>Fitness Health Gym</div>
+
+        </div>
+        <div class="middle">
+
+            <!-- middle box for navigation -->
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- right box for buttons -->
+            <button class="btn">Call us</button>
+
+            <button class="btn">Email us </button>
+
+
+        </div>
+    </header>
+    <div class="continer">
+        <h1>Join the Best Gym of Mumbai Town</h1>
+        <form action="noaction.php"> <!--noaction simply written as a script while summarizing it*/ -->
+            <div class="form-group">
+                <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Enter your age">
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your gender">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your locality">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your phone number">
+
+                </div>
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
 
 </body>
 
